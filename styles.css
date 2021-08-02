@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  min-height: 100vh;
+  width: 75%;
+  margin: auto;
+  padding: 2rem;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+#todo {
+  width: 75%;
+  overflow: hidden;
+}
+
+.lead {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  background: #2196f3;
+  color: white;
+  position: relative;
+}
+
+#addBtn {
+  position: absolute;
+  right: 5%;
+  cursor: pointer;
+}
+
+#new-todo,
+#filter {
+  border: none;
+  outline: none;
+  background: #eee;
+  width: 100%;
+  padding: 1rem 1rem;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+#new-todo {
+  background: white;
+}
+
+table,
+tr,
+td {
+  width: 100%;
+}
+
+tr:nth-child(even) {
+  background: #eee;
+}
+
+td {
+  font-size: inherit;
+  height: 2.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.del-btn {
+  height: 100%;
+  width: 0;
+  background: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+td:hover .del-btn {
+  width: 2.5rem;
+  opacity: 1;
+}
+
+.tasks {
+  padding: 0.5rem 1rem;
+}
+
+.crossout {
+  text-decoration: line-through;
+}
+
+.warning {
+  color: red;
+}
+
+.success {
+  color: green;
+}
+
+.text-center {
+  text-align: center;
+}
