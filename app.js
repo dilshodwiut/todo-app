@@ -85,7 +85,7 @@ function activateDelBtns() {
       });
       saveData(newArr);
       if (!tbody.innerHTML) {
-        notify("to-tasks", false);
+        notify("no-tasks", false);
       }
     });
   });
