@@ -25,10 +25,11 @@ filter.addEventListener("keyup", filterTodos);
 
 // Functions
 function showTodo() {
-  // input.focus();
+  // input.value = "";
   // filter.value = "";
-  const todos = loadData();
-  if (todos !== null && todos.length) {
+  // input.focus();
+  const todos = loadData() || [];
+  if (todos.length) {
     tbody.innerHTML = "";
     todos.forEach((todo) => {
       const tr = document.createElement("tr");
@@ -45,7 +46,7 @@ function showTodo() {
 function addTodo() {
   const input = document.getElementById("new-todo");
   if (input.value.trim()) {
-    const todos = loadData();
+    const todos = loadData() || [];
     let todoExists = false;
     todos.forEach((todo) => {
       if (todo.todo == input.value) {
@@ -114,7 +115,7 @@ function filterTodos(e) {
     showTodo();
   } else if (e.target.value.trim()) {
     tbody.innerHTML = "";
-    const todos = loadData();
+    const todos = loadData() || [];
     todos.forEach((todo) => {
       if (todo.todo.includes(e.target.value)) {
         const tr = document.createElement("tr");
